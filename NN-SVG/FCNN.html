@@ -1,0 +1,28 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>  <!-- Required for labels to render properly -->
+</head>
+
+<body>
+
+<div id="graph-container"></div>
+
+
+<script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+<script type="text/javascript" src="FCNN.js"></script>
+
+<script type="text/javascript">
+
+fcnn = FCNN();
+
+fcnn.redraw({'architecture_': [10, 10, 6],'showLabels_':false});
+fcnn.redistribute({'betweenNodesInLayer_': [10, 10, 10]});
+
+</script>
+
+</body>
+
+
+</html>

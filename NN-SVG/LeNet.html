@@ -1,0 +1,32 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head></head>
+
+<body>
+
+<div id="graph-container"></div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+<script type="text/javascript" src="LeNet.js"></script>
+
+<script type="text/javascript">
+
+lenet = LeNet();
+
+var architecture = [{'numberOfSquares': 24, 'squareWidth': 160, 'stride': 24}, {'numberOfSquares': 24, 'squareWidth': 16, 'stride': 8}];
+var architecture2 = [128, 64, 8];
+
+lenet.redraw({'architecture_':architecture, 'architecture2_':architecture2});
+
+lenet.redistribute({'betweenLayers_': [100, 100, 100, 100, 100], 'betweenSquares_': 10});
+
+</script>
+
+</body>
+
+
+</html>

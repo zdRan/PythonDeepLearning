@@ -1,0 +1,33 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+</head>
+
+<body>
+
+<div id="graph-container"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/91/three.min.js"></script>
+<script src="OrbitControls.js"></script>
+<script src="SVGRenderer.js"></script>
+<script src="Projector.js"></script>
+
+<script src="AlexNet.js"></script>
+
+<script type="text/javascript">
+
+alexnet = AlexNet();
+
+var architecture = [{widthAndHeight: 224, depth: 3, stride: 11}];
+var architecture2 = [100, 10];
+
+alexnet.redraw({'architecture_':architecture, 'architecture2_':architecture2});
+
+
+</script>
+
+</body>
+
+
+</html>
